@@ -1,0 +1,3 @@
+leo correctamente el archivo
+segunda linea 
+tercera linea

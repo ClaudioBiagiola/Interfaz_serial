@@ -1,0 +1,132 @@
+*******************************************************************************
+Ephemeris / PORT_LOGIN Sun Sep  6 13:19:52 2020 Pasadena, USA    / Horizons    
+*******************************************************************************
+Target body name: (2015 HM10)                     {source: JPL#38}
+Center body name: Earth (399)                     {source: DE431}
+Center-site name: (user defined site below)
+*******************************************************************************
+Start time      : A.D. 2020-Aug-09 08:00:00.0000 UT+03:00
+Stop  time      : A.D. 2020-Aug-09 20:00:00.0000 UT+03:00
+Step-size       : 60 minutes
+*******************************************************************************
+Target pole/equ : No model available
+Target radii    : (unavailable)                                                
+Center geodetic : 299.350000,-32.950000,0.0000000 {E-lon(deg),Lat(deg),Alt(km)}
+Center cylindric: 299.350000,5357.49289,-3449.307 {E-lon(deg),Dxy(km),Dz(km)}
+Center pole/equ : High-precision EOP model        {East-longitude positive}
+Center radii    : 6378.1 x 6378.1 x 6356.8 km     {Equator, meridian, pole}    
+Target primary  : Sun
+Vis. interferer : MOON (R_eq= 1737.400) km        {source: DE431}
+Rel. light bend : Sun, EARTH                      {source: DE431}
+Rel. lght bnd GM: 1.3271E+11, 3.9860E+05 km^3/s^2                              
+Small-body perts: Yes                             {source: SB431-N16}
+Atmos refraction: NO (AIRLESS)
+RA format       : HMS
+Time format     : CAL 
+Time zone       : UT+03:00
+EOP file        : eop.200904.p201126                                           
+EOP coverage    : DATA-BASED 1962-JAN-20 TO 2020-SEP-04. PREDICTS-> 2020-NOV-25
+Units conversion: 1 au= 149597870.700 km, c= 299792.458 km/s, 1 day= 86400.0 s 
+Table cut-offs 1: Elevation (-90.0deg=NO ),Airmass (>38.000=NO), Daylight (NO )
+Table cut-offs 2: Solar elongation (  0.0,180.0=NO ),Local Hour Angle( 0.0=NO )
+Table cut-offs 3: RA/DEC angular rate (     0.0=NO )                           
+Table format    : Comma Separated Values (spreadsheet)
+*******************************************************************************
+Initial IAU76/J2000 heliocentric ecliptic osculating elements (au, days, deg.):
+  EPOCH=  2457577.5 ! 2016-Jul-08.00 (TDB)         Residual RMS= .24299        
+   EC= .6002605487178958   QR= 1.009497870493654   TP= 2457204.4421051447      
+   OM= 283.2841149922784   W=  353.4759956838575   IN= 1.468688252872944       
+  Equivalent ICRF heliocentric equatorial cartesian coordinates (au, au/d):
+   X= 1.385379045098667E+00  Y= 2.734697218647237E+00  Z= 1.242599801537544E+00
+  VX=-4.220407053514021E-03 VY= 6.106975912067538E-03 VZ= 2.575471027056536E-03
+Asteroid physical parameters (km, seconds, rotational period in hours):        
+   GM= n.a.                RAD= n.a.               ROTPER= .3761               
+   H= 23.6                 G= .150                 B-V= n.a.                   
+                           ALBEDO= n.a.            STYP= n.a.                  
+*******************************************************************************
+ Date_(ZONE)_HR:MN, , , Azi_(a-app), Elev_(a-app),
+**************************************************
+$$SOE
+ 2020-Aug-09 08:00, ,m,   78.461217,   -28.368222,
+ 2020-Aug-09 09:00, ,m,   71.591514,   -16.189841,
+ 2020-Aug-09 10:00, ,m,   64.250774,    -4.504837,
+ 2020-Aug-09 11:00, ,m,   55.935618,     6.430116,
+ 2020-Aug-09 12:00, ,m,   46.130957,    16.244939,
+ 2020-Aug-09 13:00,N,m,   34.343012,    24.408272,
+ 2020-Aug-09 14:00,*,m,   20.326121,    30.220637,
+ 2020-Aug-09 15:00,*,m,    4.514021,    32.947111,
+ 2020-Aug-09 16:00,*,m,  348.239176,    32.144910,
+ 2020-Aug-09 17:00,*,m,  333.118754,    27.952032,
+ 2020-Aug-09 18:00,*, ,  320.100504,    20.990176,
+ 2020-Aug-09 19:00,*, ,  309.256528,    12.008272,
+ 2020-Aug-09 20:00,*, ,  300.185932,     1.635595,
+$$EOE
+*******************************************************************************
+Column meaning:
+ 
+TIME
+
+  Times PRIOR to 1962 are UT1, a mean-solar time closely related to the
+prior but now-deprecated GMT. Times AFTER 1962 are in UTC, the current
+civil or "wall-clock" time-scale. UTC is kept within 0.9 seconds of UT1
+using integer leap-seconds for 1972 and later years.
+
+  Conversion from the internal Barycentric Dynamical Time (TDB) of solar
+system dynamics to the non-uniform civil UT time-scale requested for output
+has not been determined for UTC times after the next July or January 1st.
+Therefore, the last known leap-second is used as a constant over future
+intervals.
+
+  Time tags refer to the UT time-scale conversion from TDB on Earth
+regardless of observer location within the solar system, although clock
+rates may differ due to the local gravity field and no analog to "UT"
+may be defined for that location.
+
+  Any 'b' symbol in the 1st-column denotes a B.C. date. First-column blank
+(" ") denotes an A.D. date. Calendar dates prior to 1582-Oct-15 are in the
+Julian calendar system. Later calendar dates are in the Gregorian system.
+
+  NOTE: A time-zone correction has been requested. See header.
+
+  NOTE: "n.a." in output means quantity "not available" at the print-time.
+ 
+SOLAR PRESENCE (OBSERVING SITE)
+  Time tag is followed by a blank, then a solar-presence symbol:
+
+        '*'  Daylight (refracted solar upper-limb on or above apparent horizon)
+        'C'  Civil twilight/dawn
+        'N'  Nautical twilight/dawn
+        'A'  Astronomical twilight/dawn
+        ' '  Night OR geocentric ephemeris
+
+LUNAR PRESENCE (OBSERVING SITE)
+  The solar-presence symbol is immediately followed by a lunar-presence symbol:
+
+        'm'  Refracted upper-limb of Moon on or above apparent horizon
+        ' '  Refracted upper-limb of Moon below apparent horizon OR geocentric
+             ephemeris
+ 
+ 'Azi_(a-app), Elev_(a-app),' =
+  Airless apparent azimuth and elevation of target center. Compensated
+for light-time, the gravitational deflection of light, stellar aberration,
+precession and nutation. Azimuth is measured clockwise from north:
+
+  North(0) -> East(90) -> South(180) -> West(270) -> North (360)
+
+Elevation angle is with respect to a plane perpendicular to the reference
+surface local zenith direction. TOPOCENTRIC ONLY.  Units: DEGREES
+
+
+ Computations by ...
+     Solar System Dynamics Group, Horizons On-Line Ephemeris System
+     4800 Oak Grove Drive, Jet Propulsion Laboratory
+     Pasadena, CA  91109   USA
+     Information  : https://ssd.jpl.nasa.gov/
+     Documentation: https://ssd.jpl.nasa.gov/?horizons_doc
+     Connect      : https://ssd.jpl.nasa.gov/?horizons (browser)
+                    telnet ssd.jpl.nasa.gov 6775       (command-line)
+                    e-mail command interface available
+                    Script and CGI interfaces available
+     Author       : Jon.D.Giorgini@jpl.nasa.gov
+
+*******************************************************************************
