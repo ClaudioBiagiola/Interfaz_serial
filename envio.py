@@ -16,6 +16,10 @@ if __name__ == '__main__':
 
         if ser.in_waiting > 0:  # if incoming bytes are waiting to be read from the serial input buffer
             data_str = ser.read(ser.inWaiting()).decode('ascii')  # read the bytes and convert from binary array to ASCII
+
+
+
+
             print(data_str, end='')  # print the incoming string without putting a new-line ('\n') automatically after every print()
             comando = b'puto el que lee \n'
             ser.write(comando)
