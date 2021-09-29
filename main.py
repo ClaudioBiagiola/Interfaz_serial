@@ -20,9 +20,9 @@ file = open("comandos.txt", "w")
 def generacion_comandos():
 
     if (validador() == 1):
-        print('pase')
+
         generacion_txt()
-        print('ok')
+
 
 
 
