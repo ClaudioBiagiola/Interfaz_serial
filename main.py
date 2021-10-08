@@ -11,8 +11,8 @@ import filecmp
 """marcadorinit = '$$SOE'
 marcadorfin = '$$EOE'"""
 #chequear_linea = ' Date_(ZONE)_HR:MN, , , Azi_(a-app), Elev_(a-app),'
-txt = open("2015HM10.txt")
-file = open("comandos.txt", "w")
+txt = open("horizons_results.txt")
+file = open("comandos2.txt", "w")
 ##datosfinal = []
 
 # Press the green button in the gutter to run the script.
@@ -27,7 +27,7 @@ def generacion_comandos():
 
 
 def validador():
-    chequear_linea = ' Date_(ZONE)_HR:MN, , , Azi_(a-app), Elev_(a-app),'
+    chequear_linea = ' Date__(UT)__HR:MN, , ,Azi_(a-app), Elev_(a-app),'
     linea1 = txt.readline()
     while len(linea1) > 0:
 
@@ -54,14 +54,14 @@ def generacion_txt():
 
        #Codigo a ejecutar para filtrar el archivo
         if flaginit == 1:
+            dato1=linea.split(' ')
 
             dato = linea.split(',')
-            datosfinal= dato[0] +"," +"P"+str(float("{0:.1f}".format(float(dato[3]))))+" "+str(float("{0:.1f}".format(float(dato[4]))))
-            #datosfinal= dato[0] +"," +"P"+dato[3].replace("   ","")+" "+dato[4].replace("  ", "")
-
-            file.write(datosfinal+'\n')
-
-            print(datosfinal)
+            datosfinal= dato[0] +"," +str(float("{0:.1f}".format(float(dato[3]))))+","+str(float("{0:.1f}".format(float(dato[4]))))
+            dato1 = datosfinal.split(' ')
+            datosaux=dato1[1]+","+dato1[2]
+            file.write(datosaux+'\n')
+            print(datosaux)
 
 
             #print(linea)

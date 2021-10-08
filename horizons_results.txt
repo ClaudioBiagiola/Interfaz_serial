@@ -1,0 +1,269 @@
+﻿*******************************************************************************
+ Revised: June 21, 2016                 Mars                            499 / 4
+ 
+ PHYSICAL DATA (updated 2019-Oct-29):
+  Vol. mean radius (km) = 3389.92+-0.04   Density (g/cm^3)      =  3.933(5+-4)
+  Mass x10^23 (kg)      =    6.4171       Flattening, f         =  1/169.779
+  Volume (x10^10 km^3)  =   16.318        Equatorial radius (km)=  3396.19
+  Sidereal rot. period  =   24.622962 hr  Sid. rot. rate, rad/s =  0.0000708822 
+  Mean solar day (sol)  =   88775.24415 s Polar gravity m/s^2   =  3.758
+  Core radius (km)      = ~1700           Equ. gravity  m/s^2   =  3.71
+  Geometric Albedo      =    0.150                                              
+
+  GM (km^3/s^2)         = 42828.375214    Mass ratio (Sun/Mars) = 3098703.59
+  GM 1-sigma (km^3/s^2) = +- 0.00028      Mass of atmosphere, kg= ~ 2.5 x 10^16
+  Mean temperature (K)  =  210            Atmos. pressure (bar) =    0.0056 
+  Obliquity to orbit    =   25.19 deg     Max. angular diam.    =  17.9"
+  Mean sidereal orb per =    1.88081578 y Visual mag. V(1,0)    =  -1.52
+  Mean sidereal orb per =  686.98 d       Orbital speed,  km/s  =  24.13
+  Hill's sphere rad. Rp =  319.8          Escape speed, km/s    =   5.027
+                                 Perihelion  Aphelion    Mean
+  Solar Constant (W/m^2)         717         493         589
+  Maximum Planetary IR (W/m^2)   470         315         390
+  Minimum Planetary IR (W/m^2)    30          30          30
+*******************************************************************************
+
+
+*******************************************************************************
+Ephemeris / API_USER Fri Oct  8 12:24:54 2021 Pasadena, USA      / Horizons    
+*******************************************************************************
+Target body name: Mars (499)                      {source: mar097}
+Center body name: Earth (399)                     {source: mar097}
+Center-site name: Observatorio Beta Orionis, Rosario
+*******************************************************************************
+Start time      : A.D. 2021-Oct-08 16:00:00.0000 UT      
+Stop  time      : A.D. 2021-Oct-08 18:00:00.0000 UT      
+Step-size       : 1 minutes
+*******************************************************************************
+Target pole/equ : IAU_MARS                        {West-longitude positive}
+Target radii    : 3396.2 x 3396.2 x 3376.2 km     {Equator, meridian, pole}    
+Center geodetic : 299.346400,-32.980601,0.0206955 {E-lon(deg),Lat(deg),Alt(km)}
+Center cylindric: 299.346400,5355.66361,-3452.165 {E-lon(deg),Dxy(km),Dz(km)}
+Center pole/equ : ITRF93                          {East-longitude positive}
+Center radii    : 6378.1 x 6378.1 x 6356.8 km     {Equator, meridian, pole}    
+Target primary  : Sun
+Vis. interferer : MOON (R_eq= 1737.400) km        {source: mar097}
+Rel. light bend : Sun, EARTH                      {source: mar097}
+Rel. lght bnd GM: 1.3271E+11, 3.9860E+05 km^3/s^2                              
+Atmos refraction: NO (AIRLESS)
+RA format       : HMS
+Time format     : CAL 
+RTS-only print  : NO       
+EOP file        : eop.211006.p211230                                           
+EOP coverage    : DATA-BASED 1962-JAN-20 TO 2021-OCT-06. PREDICTS-> 2021-DEC-29
+Units conversion: 1 au= 149597870.700 km, c= 299792.458 km/s, 1 day= 86400.0 s 
+Table cut-offs 1: Elevation (-90.0deg=NO ),Airmass (>38.000=NO), Daylight (NO )
+Table cut-offs 2: Solar elongation (  0.0,180.0=NO ),Local Hour Angle( 0.0=NO )
+Table cut-offs 3: RA/DEC angular rate (     0.0=NO )                           
+Table format    : Comma Separated Values (spreadsheet)
+*******************************************************************************
+ Date__(UT)__HR:MN, , ,Azi_(a-app), Elev_(a-app),
+*************************************************
+$$SOE
+ 2021-Oct-08 16:00,*,m, 354.856537,    62.404445,
+ 2021-Oct-08 16:01,*,m, 354.320579,    62.384827,
+ 2021-Oct-08 16:02,*,m, 353.785340,    62.363256,
+ 2021-Oct-08 16:03,*,m, 353.250884,    62.339736,
+ 2021-Oct-08 16:04,*,m, 352.717277,    62.314273,
+ 2021-Oct-08 16:05,*,m, 352.184584,    62.286872,
+ 2021-Oct-08 16:06,*,m, 351.652869,    62.257539,
+ 2021-Oct-08 16:07,*,m, 351.122195,    62.226281,
+ 2021-Oct-08 16:08,*,m, 350.592625,    62.193103,
+ 2021-Oct-08 16:09,*,m, 350.064219,    62.158012,
+ 2021-Oct-08 16:10,*,m, 349.537039,    62.121016,
+ 2021-Oct-08 16:11,*,m, 349.011143,    62.082123,
+ 2021-Oct-08 16:12,*,m, 348.486590,    62.041341,
+ 2021-Oct-08 16:13,*,m, 347.963438,    61.998677,
+ 2021-Oct-08 16:14,*,m, 347.441742,    61.954141,
+ 2021-Oct-08 16:15,*,m, 346.921558,    61.907742,
+ 2021-Oct-08 16:16,*,m, 346.402940,    61.859489,
+ 2021-Oct-08 16:17,*,m, 345.885940,    61.809391,
+ 2021-Oct-08 16:18,*,m, 345.370611,    61.757459,
+ 2021-Oct-08 16:19,*,m, 344.857001,    61.703702,
+ 2021-Oct-08 16:20,*,m, 344.345161,    61.648132,
+ 2021-Oct-08 16:21,*,m, 343.835138,    61.590759,
+ 2021-Oct-08 16:22,*,m, 343.326979,    61.531594,
+ 2021-Oct-08 16:23,*,m, 342.820727,    61.470648,
+ 2021-Oct-08 16:24,*,m, 342.316428,    61.407933,
+ 2021-Oct-08 16:25,*,m, 341.814124,    61.343461,
+ 2021-Oct-08 16:26,*,m, 341.313855,    61.277244,
+ 2021-Oct-08 16:27,*,m, 340.815661,    61.209293,
+ 2021-Oct-08 16:28,*,m, 340.319581,    61.139622,
+ 2021-Oct-08 16:29,*,m, 339.825651,    61.068242,
+ 2021-Oct-08 16:30,*,m, 339.333907,    60.995167,
+ 2021-Oct-08 16:31,*,m, 338.844383,    60.920409,
+ 2021-Oct-08 16:32,*,m, 338.357111,    60.843983,
+ 2021-Oct-08 16:33,*,m, 337.872123,    60.765900,
+ 2021-Oct-08 16:34,*,m, 337.389449,    60.686174,
+ 2021-Oct-08 16:35,*,m, 336.909117,    60.604820,
+ 2021-Oct-08 16:36,*,m, 336.431155,    60.521850,
+ 2021-Oct-08 16:37,*,m, 335.955588,    60.437278,
+ 2021-Oct-08 16:38,*,m, 335.482441,    60.351119,
+ 2021-Oct-08 16:39,*,m, 335.011737,    60.263386,
+ 2021-Oct-08 16:40,*,m, 334.543498,    60.174093,
+ 2021-Oct-08 16:41,*,m, 334.077745,    60.083256,
+ 2021-Oct-08 16:42,*,m, 333.614496,    59.990886,
+ 2021-Oct-08 16:43,*,m, 333.153770,    59.897000,
+ 2021-Oct-08 16:44,*,m, 332.695584,    59.801612,
+ 2021-Oct-08 16:45,*,m, 332.239952,    59.704735,
+ 2021-Oct-08 16:46,*,m, 331.786889,    59.606385,
+ 2021-Oct-08 16:47,*,m, 331.336409,    59.506576,
+ 2021-Oct-08 16:48,*,m, 330.888522,    59.405322,
+ 2021-Oct-08 16:49,*,m, 330.443241,    59.302637,
+ 2021-Oct-08 16:50,*,m, 330.000574,    59.198538,
+ 2021-Oct-08 16:51,*,m, 329.560530,    59.093037,
+ 2021-Oct-08 16:52,*,m, 329.123116,    58.986150,
+ 2021-Oct-08 16:53,*,m, 328.688340,    58.877891,
+ 2021-Oct-08 16:54,*,m, 328.256205,    58.768275,
+ 2021-Oct-08 16:55,*,m, 327.826717,    58.657316,
+ 2021-Oct-08 16:56,*,m, 327.399879,    58.545028,
+ 2021-Oct-08 16:57,*,m, 326.975692,    58.431426,
+ 2021-Oct-08 16:58,*,m, 326.554160,    58.316525,
+ 2021-Oct-08 16:59,*,m, 326.135281,    58.200339,
+ 2021-Oct-08 17:00,*,m, 325.719056,    58.082882,
+ 2021-Oct-08 17:01,*,m, 325.305484,    57.964168,
+ 2021-Oct-08 17:02,*,m, 324.894563,    57.844211,
+ 2021-Oct-08 17:03,*,m, 324.486289,    57.723027,
+ 2021-Oct-08 17:04,*,m, 324.080659,    57.600628,
+ 2021-Oct-08 17:05,*,m, 323.677668,    57.477029,
+ 2021-Oct-08 17:06,*,m, 323.277313,    57.352243,
+ 2021-Oct-08 17:07,*,m, 322.879585,    57.226285,
+ 2021-Oct-08 17:08,*,m, 322.484480,    57.099169,
+ 2021-Oct-08 17:09,*,m, 322.091991,    56.970907,
+ 2021-Oct-08 17:10,*,m, 321.702108,    56.841514,
+ 2021-Oct-08 17:11,*,m, 321.314824,    56.711004,
+ 2021-Oct-08 17:12,*,m, 320.930130,    56.579388,
+ 2021-Oct-08 17:13,*,m, 320.548016,    56.446682,
+ 2021-Oct-08 17:14,*,m, 320.168472,    56.312897,
+ 2021-Oct-08 17:15,*,m, 319.791488,    56.178048,
+ 2021-Oct-08 17:16,*,m, 319.417052,    56.042147,
+ 2021-Oct-08 17:17,*,m, 319.045153,    55.905207,
+ 2021-Oct-08 17:18,*,m, 318.675778,    55.767241,
+ 2021-Oct-08 17:19,*,m, 318.308916,    55.628261,
+ 2021-Oct-08 17:20,*,m, 317.944554,    55.488281,
+ 2021-Oct-08 17:21,*,m, 317.582677,    55.347312,
+ 2021-Oct-08 17:22,*,m, 317.223273,    55.205367,
+ 2021-Oct-08 17:23,*,m, 316.866327,    55.062458,
+ 2021-Oct-08 17:24,*,m, 316.511825,    54.918598,
+ 2021-Oct-08 17:25,*,m, 316.159753,    54.773798,
+ 2021-Oct-08 17:26,*,m, 315.810095,    54.628070,
+ 2021-Oct-08 17:27,*,m, 315.462837,    54.481426,
+ 2021-Oct-08 17:28,*,m, 315.117962,    54.333878,
+ 2021-Oct-08 17:29,*,m, 314.775455,    54.185437,
+ 2021-Oct-08 17:30,*,m, 314.435300,    54.036115,
+ 2021-Oct-08 17:31,*,m, 314.097481,    53.885923,
+ 2021-Oct-08 17:32,*,m, 313.761981,    53.734872,
+ 2021-Oct-08 17:33,*,m, 313.428784,    53.582973,
+ 2021-Oct-08 17:34,*,m, 313.097873,    53.430237,
+ 2021-Oct-08 17:35,*,m, 312.769232,    53.276675,
+ 2021-Oct-08 17:36,*,m, 312.442842,    53.122298,
+ 2021-Oct-08 17:37,*,m, 312.118687,    52.967116,
+ 2021-Oct-08 17:38,*,m, 311.796749,    52.811140,
+ 2021-Oct-08 17:39,*,m, 311.477012,    52.654379,
+ 2021-Oct-08 17:40,*,m, 311.159456,    52.496845,
+ 2021-Oct-08 17:41,*,m, 310.844066,    52.338548,
+ 2021-Oct-08 17:42,*,m, 310.530823,    52.179496,
+ 2021-Oct-08 17:43,*,m, 310.219709,    52.019701,
+ 2021-Oct-08 17:44,*,m, 309.910707,    51.859172,
+ 2021-Oct-08 17:45,*,m, 309.603799,    51.697918,
+ 2021-Oct-08 17:46,*,m, 309.298966,    51.535950,
+ 2021-Oct-08 17:47,*,m, 308.996191,    51.373276,
+ 2021-Oct-08 17:48,*,m, 308.695456,    51.209906,
+ 2021-Oct-08 17:49,*,m, 308.396743,    51.045849,
+ 2021-Oct-08 17:50,*,m, 308.100034,    50.881114,
+ 2021-Oct-08 17:51,*,m, 307.805310,    50.715710,
+ 2021-Oct-08 17:52,*,m, 307.512555,    50.549645,
+ 2021-Oct-08 17:53,*,m, 307.221749,    50.382930,
+ 2021-Oct-08 17:54,*,m, 306.932876,    50.215571,
+ 2021-Oct-08 17:55,*,m, 306.645917,    50.047578,
+ 2021-Oct-08 17:56,*,m, 306.360854,    49.878960,
+ 2021-Oct-08 17:57,*,m, 306.077670,    49.709723,
+ 2021-Oct-08 17:58,*,m, 305.796347,    49.539877,
+ 2021-Oct-08 17:59,*,m, 305.516866,    49.369430,
+ 2021-Oct-08 18:00,*,m, 305.239211,    49.198390,
+$$EOE
+*******************************************************************************
+Column meaning:
+ 
+TIME
+
+  Times PRIOR to 1962 are UT1, a mean-solar time closely related to the
+prior but now-deprecated GMT. Times AFTER 1962 are in UTC, the current
+civil or "wall-clock" time-scale. UTC is kept within 0.9 seconds of UT1
+using integer leap-seconds for 1972 and later years.
+
+  Conversion from the internal Barycentric Dynamical Time (TDB) of solar
+system dynamics to the non-uniform civil UT time-scale requested for output
+has not been determined for UTC times after the next July or January 1st.
+Therefore, the last known leap-second is used as a constant over future
+intervals.
+
+  Time tags refer to the UT time-scale conversion from TDB on Earth
+regardless of observer location within the solar system, although clock
+rates may differ due to the local gravity field and no analog to "UT"
+may be defined for that location.
+
+  Any 'b' symbol in the 1st-column denotes a B.C. date. First-column blank
+(" ") denotes an A.D. date. Calendar dates prior to 1582-Oct-15 are in the
+Julian calendar system. Later calendar dates are in the Gregorian system.
+
+  NOTE: "n.a." in output means quantity "not available" at the print-time.
+ 
+SOLAR PRESENCE (OBSERVING SITE)
+  Time tag is followed by a blank, then a solar-presence condition code:
+
+       '*'  Daylight (refracted solar upper-limb on or above apparent horizon)
+       'C'  Civil twilight/dawn
+       'N'  Nautical twilight/dawn
+       'A'  Astronomical twilight/dawn
+       ' '  Night OR geocentric ephemeris
+
+LUNAR PRESENCE WITH TARGET RISE/TRANSIT/SET EVENT MARKER (OBSERVING SITE)
+  The solar-presence code column is immediately followed by another marker:
+
+       'm'  Refracted upper-limb of Moon on or above apparent horizon
+       ' '  Refracted upper-limb of Moon below apparent horizon OR geocentric
+
+  The lunar presence marker (an ongoing state) can be over-ridden by a target
+  event marker if an event has occurred since the last output step:
+
+       'r'  Rise          (target body on or went above cut-off RTS elevation)
+       'e'  Elevation max (target body maximum elevation angle has occurred)
+       't'  Transit       (target body at or passed through observer meridian)
+       's'  Set           (target body on or went below cut-off RTS elevation)
+ 
+RTS MARKERS (TVH)
+  Rise and set are with respect to the reference ellipsoid true visual horizon
+defined by the elevation cut-off angle. Horizon dip and yellow-light refraction
+(Earth only) are considered. Accuracy is < or = to twice the requested search
+step-size.
+ 
+ 'Azi_(a-app), Elev_(a-app),' =
+  Airless apparent azimuth and elevation of target center. Compensated
+for light-time, the gravitational deflection of light, stellar aberration,
+precession and nutation. Azimuth is measured clockwise from north:
+
+  North(0) -> East(90) -> South(180) -> West(270) -> North (360)
+
+Elevation angle is with respect to a plane perpendicular to the reference
+surface local zenith direction. TOPOCENTRIC ONLY.  Units: DEGREES
+
+
+ Computations by ...
+
+    Solar System Dynamics Group, Horizons On-Line Ephemeris System
+    4800 Oak Grove Drive, Jet Propulsion Laboratory
+    Pasadena, CA  91109   USA
+
+    General site: https://ssd.jpl.nasa.gov/
+    Mailing list: https://ssd.jpl.nasa.gov/email_list.html
+    System news : https://ssd.jpl.nasa.gov/horizons/news.html
+    User Guide  : https://ssd.jpl.nasa.gov/horizons/manual.html
+    Connect     : browser        https://ssd.jpl.nasa.gov/horizons/app.html#/x
+                  API            https://ssd-api.jpl.nasa.gov/doc/horizons.html
+                  command-line   telnet ssd.jpl.nasa.gov 6775
+                  e-mail/batch   https://ssd.jpl.nasa.gov/ftp/ssd/hrzn_batch.txt
+                  scripts        https://ssd.jpl.nasa.gov/ftp/ssd/SCRIPTS
+    Author      : Jon.D.Giorgini@jpl.nasa.gov
+
+*******************************************************************************
