@@ -5,6 +5,7 @@ import serial
 #import modulo.py
 import time
 import datetime
+from datetime import datetime
 import threading
 
 """"   ======================= [Lista de comandos validos] =======================
@@ -150,27 +151,39 @@ def Control_autonomo():
     global data_acimut
     global data_elevacion
     global flag1
+    lineasleidas=0
     hora_actual = time.strftime('%H:%M')
-    print(hora_actual)
+    """--------solicito fecha y la genero al formato para comparar con el archivo----------"""
+    fecha_sin_analizar= time.strftime('%m/%d/%y')
+    objDate = datetime.strptime(fecha_sin_analizar,'%m/%d/%y')
+    fecha=datetime.strftime(objDate, '%Y-%b-%d')
     file.seek(0)
+    total_lines = sum(1 for line in file)
+
+    #print(total_lines)
     linea = file.readline()
     while len(linea) > 0:
         dato1 = linea.split(',')
-        if dato1[1] == hora_actual:
-            if flag1 :
+
+        if dato1[1] == hora_actual and fecha == dato1[0]:
+
+            if flag1:
                 data_acimut=dato1[2]
                 data_elevacion=dato1[3]
                 Tracking(dato1[2],dato1[3])
-
                 flag1=False
+                lineasleidas=lineasleidas+1
+
             if (float(data_acimut)!=float(dato1[2])) | (float(data_elevacion)!=float(dato1[3])):
                 Tracking(dato1[2], dato1[3])
                 data_acimut = dato1[2]
                 data_elevacion = dato1[3]
-
+                lineasleidas += 1
 
         linea = file.readline()
-
+    return 0
+    if total_lines==lineasleidas:
+        return 1
 
 # Press the green button in the gutter to run the script.
 
