@@ -8,12 +8,13 @@
 
 import filecmp
 
-"""marcadorinit = '$$SOE'
-marcadorfin = '$$EOE'"""
+
 #chequear_linea = ' Date_(ZONE)_HR:MN, , , Azi_(a-app), Elev_(a-app),'
-txt = open("horizons_results.txt")
-file = open("comandos2.txt", "w")
-##datosfinal = []
+#--------archivo de donde  descargado de jdl horizons----------
+txt = open("horizons_results1.txt")
+#-------------archivo de salida-----------
+file = open("comandos3.txt", "w")
+
 
 # Press the green button in the gutter to run the script.
 
@@ -23,10 +24,9 @@ def generacion_comandos():
 
         generacion_txt()
 
-
-
-
 def validador():
+
+    #----------validador del formato de archivo fuente----------
     chequear_linea = ' Date__(UT)__HR:MN, , ,Azi_(a-app), Elev_(a-app),'
     linea1 = txt.readline()
     while len(linea1) > 0:
@@ -38,7 +38,7 @@ def validador():
         linea1 = txt.readline()
 
     return 0
-
+#---funcion principal generadora del txt --------------
 def generacion_txt():
     marcadorinit = '$$SOE'
     marcadorfin = '$$EOE'
@@ -61,34 +61,18 @@ def generacion_txt():
             dato1 = datosfinal.split(' ')
             datosaux=dato1[1]+","+dato1[2]
             file.write(datosaux+'\n')
-            print(datosaux)
-
-
-            #print(linea)
-        #Fin de codigo a ejecutar  para analizar los datos
-
-
-
+            #print(datosaux)
 
         # Encuentro el inicio de la trama deseada, levanta flag
         if  marcadorinit in linea:
             flaginit= 1
-
-
         linea = txt.readline()
-
-
-
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/"""
 
 if __name__ == '__main__':
+    """funcion principal generadora de comandos"""
     generacion_comandos()
-    """if(validador() == 1):
-        
-        print('pase')
-        #txt.seek(0)
-        generacion_txt()
-        print('ok')"""
+
 file.close()
 txt.close()

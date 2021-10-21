@@ -2,7 +2,7 @@
 import serial
 from serial import Serial
 import serial
-#import modulo.py
+
 import time
 import datetime
 from datetime import datetime
@@ -38,7 +38,9 @@ import threading
  
    ======================================================================
 """
-file = open("comandos2.txt", "r")
+#---------archivo de entrada el mismo generado por el generador de txt----------
+file = open("comandos3.txt", "r")
+#----------habilito el serial--------------
 ser = serial.Serial('COM3', 9600)
 Flag_recep=False
 flag1=True
@@ -46,6 +48,19 @@ acimut=0
 elevacion=0
 data_acimut = -99 #valor no valido
 data_elevacion = -99 #valor no valido
+"""----------------Comando Manuales-------------------"""
+"""
+mov                                         in                  out
+Acimut  Clockwise Rotation                  RC ---------------> R
+Acimut  Counter Clockwise Rotation          CRC --------------> L
+Acimut  CW/CCW Rotation Stop                Stop_Acim --------> A
+Elevacion UP Direction Rotation             UpDR -------------> U
+Elevacion DOWN Direction Rotation           DownDR -----------> D
+Elevacion UP/DOWN Direction Rotation Stop   Stop_ele ---------> E
+"""
+
+
+
 def envio_de_datos_manuales( comando):
 
     #Acimut
@@ -66,7 +81,7 @@ def envio_de_datos_manuales( comando):
 
     # U // UP Direction Rotation
     if comando == 'UpDR':
-        texto = b'A\n'
+        texto = b'U\n'
         ser.write(texto)
 
     # D // DOWN Direction Rotation
@@ -76,9 +91,14 @@ def envio_de_datos_manuales( comando):
 
     # E // UP/DOWN Direction Rotation Stop
     if comando == 'Stop_ele':
-        texto = b'D\n'
+        texto = b'E\n'
         ser.write(texto)
 
+"""
+Acimut                  C // solicitar datos ------------> C
+Elevacion               B // solicitar datos-------------> B
+Acimut elevacion        B // solicitar datos-------------> C-B
+"""
 def Solicitud_datos(comando):
     # Acimut
     # C // solicitar datos
@@ -117,24 +137,39 @@ def Recepcion_datos():
         Flag_recep=True
         slice_object1 = slice(3)
         slice_object2 = slice(4, 5, 1)
+        """
         if data_str == '\r':
             comando = b'recibi un CR\n'
             ser.write(comando)
-        if data_str == '\r' + '\n':
+        """
+        if data_str == '\r\n':
+
+            return 'mensaje_correcto'
             data = 'mensaje correcto'
+        """
+            
             comando = b'recibi un CRLf\n'
             ser.write(comando)
             envio_de_datos_manuales('RC')
             Tracking(19.2, 50.9)
+            
         if data_str[slice_object2] == '\r' + ',' + '\n':
             print('entre correcto', end='')
+        """
         if data_str == "?>\r\n":
+            return 'mensaje_erroneo'
             data='mensaje erroneo'
             comando = b'comando erroneo\n'
             ser.write(comando)
         if Flag_recep:
-            comando = b'llego\n'
-            ser.write(comando)
+            dato1 = data_str.split(' ')
+            if dato1[0]=='\r\n':
+                if dato1[1] != 0 and dato1[2]==0:
+                    return dato1[1]
+                if dato1[2] !=0:
+                    return dato1[1]+','+dato1[2]
+
+
         return data
     #time.sleep(0.01)  # Optional: sleep 10 ms (0.01 sec) once per loop to let other threads on your PC run during this time
         # print(data_str[slice_object1], end='')
@@ -157,9 +192,9 @@ def Control_autonomo():
     fecha_sin_analizar= time.strftime('%m/%d/%y')
     objDate = datetime.strptime(fecha_sin_analizar,'%m/%d/%y')
     fecha=datetime.strftime(objDate, '%Y-%b-%d')
-    file.seek(0)
-    total_lines = sum(1 for line in file)
 
+    total_lines = sum(1 for line in file)
+    file.seek(0)
     #print(total_lines)
     linea = file.readline()
     while len(linea) > 0:
@@ -191,8 +226,8 @@ if __name__ == '__main__':
 
     while 1:
         time.sleep(1)
-        #data = Recepcion_datos()
-
+        data = Recepcion_datos()
+        print(data)
         Control_autonomo()
         #print(data)
 
