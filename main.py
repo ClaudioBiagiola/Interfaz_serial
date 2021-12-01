@@ -11,7 +11,7 @@ import filecmp
 
 #chequear_linea = ' Date_(ZONE)_HR:MN, , , Azi_(a-app), Elev_(a-app),'
 #--------archivo de donde  descargado de jdl horizons----------
-txt = open("horizons_results1.txt")
+txt = open("horizons_results(2).txt")
 #-------------archivo de salida-----------
 file = open("comandos3.txt", "w")
 
@@ -44,12 +44,13 @@ def generacion_txt():
     marcadorfin = '$$EOE'
     flaginit = 0
     datosfinal = []
-    print('pase')
+
     linea = txt.readline()
     while len (linea) > 0:
 
         # se encuentra el de datos, bajo la flag
         if marcadorfin in linea:
+            print('generacion correcta')
             flaginit = 0
 
        #Codigo a ejecutar para filtrar el archivo

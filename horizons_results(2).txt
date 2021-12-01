@@ -1,0 +1,232 @@
+﻿
+
+*******************************************************************************
+Ephemeris / WWW_USER Sat Oct 23 13:12:01 2021 Pasadena, USA      / Horizons    
+*******************************************************************************
+Target body name: Mars (499)                      {source: mar097}
+Center body name: Earth (399)                     {source: mar097}
+Center-site name: (user defined site below)
+*******************************************************************************
+Start time      : A.D. 2021-Oct-23 17:12:00.0000 UT      
+Stop  time      : A.D. 2021-Oct-23 19:00:00.0000 UT      
+Step-size       : 1 minutes
+*******************************************************************************
+Target pole/equ : IAU_MARS                        {West-longitude positive}
+Target radii    : 3396.2 x 3396.2 x 3376.2 km     {Equator, meridian, pole}    
+Center geodetic : 301.500100,-34.333200,1.059E-12 {E-lon(deg),Lat(deg),Alt(km)}
+Center cylindric: 301.500100,5272.50139,-3577.028 {E-lon(deg),Dxy(km),Dz(km)}
+Center pole/equ : ITRF93                          {East-longitude positive}
+Center radii    : 6378.1 x 6378.1 x 6356.8 km     {Equator, meridian, pole}    
+Target primary  : Sun
+Vis. interferer : MOON (R_eq= 1737.400) km        {source: mar097}
+Rel. light bend : Sun, EARTH                      {source: mar097}
+Rel. lght bnd GM: 1.3271E+11, 3.9860E+05 km^3/s^2                              
+Atmos refraction: NO (AIRLESS)
+RA format       : HMS
+Time format     : CAL 
+RTS-only print  : NO       
+EOP file        : eop.211021.p220114                                           
+EOP coverage    : DATA-BASED 1962-JAN-20 TO 2021-OCT-21. PREDICTS-> 2022-JAN-13
+Units conversion: 1 au= 149597870.700 km, c= 299792.458 km/s, 1 day= 86400.0 s 
+Table cut-offs 1: Elevation (-90.0deg=NO ),Airmass (>38.000=NO), Daylight (NO )
+Table cut-offs 2: Solar elongation (  0.0,180.0=NO ),Local Hour Angle( 0.0=NO )
+Table cut-offs 3: RA/DEC angular rate (     0.0=NO )                           
+Table format    : Comma Separated Values (spreadsheet)
+*******************************************************************************
+ Date__(UT)__HR:MN, , ,Azi_(a-app), Elev_(a-app),
+*************************************************
+$$SOE
+ 2021-Oct-23 17:12,*, , 307.530310,    54.115775,
+ 2021-Oct-23 17:13,*, , 307.216105,    53.951679,
+ 2021-Oct-23 17:14,*, , 306.904170,    53.786899,
+ 2021-Oct-23 17:15,*, , 306.594485,    53.621446,
+ 2021-Oct-23 17:16,*, , 306.287025,    53.455329,
+ 2021-Oct-23 17:17,*, , 305.981770,    53.288558,
+ 2021-Oct-23 17:18,*, , 305.678695,    53.121141,
+ 2021-Oct-23 17:19,*, , 305.377780,    52.953089,
+ 2021-Oct-23 17:20,*, , 305.079002,    52.784410,
+ 2021-Oct-23 17:21,*, , 304.782338,    52.615114,
+ 2021-Oct-23 17:22,*, , 304.487767,    52.445209,
+ 2021-Oct-23 17:23,*, , 304.195267,    52.274705,
+ 2021-Oct-23 17:24,*, , 303.904815,    52.103609,
+ 2021-Oct-23 17:25,*, , 303.616391,    51.931930,
+ 2021-Oct-23 17:26,*, , 303.329972,    51.759677,
+ 2021-Oct-23 17:27,*, , 303.045537,    51.586858,
+ 2021-Oct-23 17:28,*, , 302.763065,    51.413481,
+ 2021-Oct-23 17:29,*, , 302.482535,    51.239555,
+ 2021-Oct-23 17:30,*, , 302.203925,    51.065086,
+ 2021-Oct-23 17:31,*, , 301.927214,    50.890083,
+ 2021-Oct-23 17:32,*, , 301.652382,    50.714554,
+ 2021-Oct-23 17:33,*, , 301.379409,    50.538506,
+ 2021-Oct-23 17:34,*, , 301.108272,    50.361947,
+ 2021-Oct-23 17:35,*, , 300.838953,    50.184884,
+ 2021-Oct-23 17:36,*, , 300.571431,    50.007324,
+ 2021-Oct-23 17:37,*, , 300.305685,    49.829275,
+ 2021-Oct-23 17:38,*, , 300.041697,    49.650744,
+ 2021-Oct-23 17:39,*, , 299.779446,    49.471736,
+ 2021-Oct-23 17:40,*, , 299.518912,    49.292261,
+ 2021-Oct-23 17:41,*, , 299.260077,    49.112323,
+ 2021-Oct-23 17:42,*, , 299.002921,    48.931931,
+ 2021-Oct-23 17:43,*, , 298.747425,    48.751089,
+ 2021-Oct-23 17:44,*, , 298.493570,    48.569806,
+ 2021-Oct-23 17:45,*, , 298.241338,    48.388087,
+ 2021-Oct-23 17:46,*, , 297.990709,    48.205939,
+ 2021-Oct-23 17:47,*, , 297.741666,    48.023367,
+ 2021-Oct-23 17:48,*, , 297.494189,    47.840378,
+ 2021-Oct-23 17:49,*, , 297.248262,    47.656978,
+ 2021-Oct-23 17:50,*, , 297.003866,    47.473173,
+ 2021-Oct-23 17:51,*, , 296.760983,    47.288969,
+ 2021-Oct-23 17:52,*, , 296.519597,    47.104371,
+ 2021-Oct-23 17:53,*, , 296.279688,    46.919385,
+ 2021-Oct-23 17:54,*, , 296.041241,    46.734017,
+ 2021-Oct-23 17:55,*, , 295.804238,    46.548272,
+ 2021-Oct-23 17:56,*, , 295.568663,    46.362156,
+ 2021-Oct-23 17:57,*, , 295.334498,    46.175674,
+ 2021-Oct-23 17:58,*, , 295.101727,    45.988832,
+ 2021-Oct-23 17:59,*, , 294.870334,    45.801634,
+ 2021-Oct-23 18:00,*, , 294.640303,    45.614085,
+ 2021-Oct-23 18:01,*, , 294.411617,    45.426192,
+ 2021-Oct-23 18:02,*, , 294.184260,    45.237959,
+ 2021-Oct-23 18:03,*, , 293.958217,    45.049390,
+ 2021-Oct-23 18:04,*, , 293.733473,    44.860491,
+ 2021-Oct-23 18:05,*, , 293.510011,    44.671266,
+ 2021-Oct-23 18:06,*, , 293.287817,    44.481720,
+ 2021-Oct-23 18:07,*, , 293.066876,    44.291859,
+ 2021-Oct-23 18:08,*, , 292.847172,    44.101685,
+ 2021-Oct-23 18:09,*, , 292.628692,    43.911205,
+ 2021-Oct-23 18:10,*, , 292.411419,    43.720422,
+ 2021-Oct-23 18:11,*, , 292.195341,    43.529340,
+ 2021-Oct-23 18:12,*, , 291.980442,    43.337965,
+ 2021-Oct-23 18:13,*, , 291.766708,    43.146300,
+ 2021-Oct-23 18:14,*, , 291.554126,    42.954350,
+ 2021-Oct-23 18:15,*, , 291.342681,    42.762119,
+ 2021-Oct-23 18:16,*, , 291.132361,    42.569611,
+ 2021-Oct-23 18:17,*, , 290.923151,    42.376830,
+ 2021-Oct-23 18:18,*, , 290.715038,    42.183779,
+ 2021-Oct-23 18:19,*, , 290.508008,    41.990464,
+ 2021-Oct-23 18:20,*, , 290.302050,    41.796888,
+ 2021-Oct-23 18:21,*, , 290.097149,    41.603054,
+ 2021-Oct-23 18:22,*, , 289.893293,    41.408967,
+ 2021-Oct-23 18:23,*, , 289.690469,    41.214630,
+ 2021-Oct-23 18:24,*, , 289.488665,    41.020046,
+ 2021-Oct-23 18:25,*, , 289.287868,    40.825221,
+ 2021-Oct-23 18:26,*, , 289.088067,    40.630157,
+ 2021-Oct-23 18:27,*, , 288.889248,    40.434857,
+ 2021-Oct-23 18:28,*, , 288.691400,    40.239325,
+ 2021-Oct-23 18:29,*, , 288.494511,    40.043566,
+ 2021-Oct-23 18:30,*, , 288.298570,    39.847581,
+ 2021-Oct-23 18:31,*, , 288.103564,    39.651375,
+ 2021-Oct-23 18:32,*, , 287.909482,    39.454950,
+ 2021-Oct-23 18:33,*, , 287.716313,    39.258311,
+ 2021-Oct-23 18:34,*, , 287.524046,    39.061460,
+ 2021-Oct-23 18:35,*, , 287.332670,    38.864400,
+ 2021-Oct-23 18:36,*, , 287.142173,    38.667135,
+ 2021-Oct-23 18:37,*, , 286.952544,    38.469668,
+ 2021-Oct-23 18:38,*, , 286.763774,    38.272001,
+ 2021-Oct-23 18:39,*, , 286.575850,    38.074139,
+ 2021-Oct-23 18:40,*, , 286.388764,    37.876083,
+ 2021-Oct-23 18:41,*, , 286.202504,    37.677837,
+ 2021-Oct-23 18:42,*, , 286.017060,    37.479404,
+ 2021-Oct-23 18:43,*, , 285.832422,    37.280787,
+ 2021-Oct-23 18:44,*, , 285.648580,    37.081988,
+ 2021-Oct-23 18:45,*, , 285.465523,    36.883011,
+ 2021-Oct-23 18:46,*, , 285.283243,    36.683858,
+ 2021-Oct-23 18:47,*, , 285.101729,    36.484531,
+ 2021-Oct-23 18:48,*, , 284.920971,    36.285035,
+ 2021-Oct-23 18:49,*, , 284.740961,    36.085370,
+ 2021-Oct-23 18:50,*, , 284.561689,    35.885541,
+ 2021-Oct-23 18:51,*, , 284.383144,    35.685549,
+ 2021-Oct-23 18:52,*, , 284.205319,    35.485398,
+ 2021-Oct-23 18:53,*, , 284.028204,    35.285089,
+ 2021-Oct-23 18:54,*, , 283.851790,    35.084625,
+ 2021-Oct-23 18:55,*, , 283.676067,    34.884010,
+ 2021-Oct-23 18:56,*, , 283.501028,    34.683244,
+ 2021-Oct-23 18:57,*, , 283.326664,    34.482332,
+ 2021-Oct-23 18:58,*, , 283.152965,    34.281274,
+ 2021-Oct-23 18:59,*, , 282.979923,    34.080075,
+ 2021-Oct-23 19:00,*, , 282.807530,    33.878735,
+$$EOE
+*******************************************************************************
+Column meaning:
+ 
+TIME
+
+  Times PRIOR to 1962 are UT1, a mean-solar time closely related to the
+prior but now-deprecated GMT. Times AFTER 1962 are in UTC, the current
+civil or "wall-clock" time-scale. UTC is kept within 0.9 seconds of UT1
+using integer leap-seconds for 1972 and later years.
+
+  Conversion from the internal Barycentric Dynamical Time (TDB) of solar
+system dynamics to the non-uniform civil UT time-scale requested for output
+has not been determined for UTC times after the next July or January 1st.
+Therefore, the last known leap-second is used as a constant over future
+intervals.
+
+  Time tags refer to the UT time-scale conversion from TDB on Earth
+regardless of observer location within the solar system, although clock
+rates may differ due to the local gravity field and no analog to "UT"
+may be defined for that location.
+
+  Any 'b' symbol in the 1st-column denotes a B.C. date. First-column blank
+(" ") denotes an A.D. date. Calendar dates prior to 1582-Oct-15 are in the
+Julian calendar system. Later calendar dates are in the Gregorian system.
+
+  NOTE: "n.a." in output means quantity "not available" at the print-time.
+ 
+SOLAR PRESENCE (OBSERVING SITE)
+  Time tag is followed by a blank, then a solar-presence condition code:
+
+       '*'  Daylight (refracted solar upper-limb on or above apparent horizon)
+       'C'  Civil twilight/dawn
+       'N'  Nautical twilight/dawn
+       'A'  Astronomical twilight/dawn
+       ' '  Night OR geocentric ephemeris
+
+LUNAR PRESENCE WITH TARGET RISE/TRANSIT/SET EVENT MARKER (OBSERVING SITE)
+  The solar-presence code column is immediately followed by another marker:
+
+       'm'  Refracted upper-limb of Moon on or above apparent horizon
+       ' '  Refracted upper-limb of Moon below apparent horizon OR geocentric
+
+  The lunar presence marker (an ongoing state) can be over-ridden by a target
+  event marker if an event has occurred since the last output step:
+
+       'r'  Rise          (target body on or went above cut-off RTS elevation)
+       'e'  Elevation max (target body maximum elevation angle has occurred)
+       't'  Transit       (target body at or passed through observer meridian)
+       's'  Set           (target body on or went below cut-off RTS elevation)
+ 
+RTS MARKERS (TVH)
+  Rise and set are with respect to the reference ellipsoid true visual horizon
+defined by the elevation cut-off angle. Horizon dip and yellow-light refraction
+(Earth only) are considered. Accuracy is < or = to twice the requested search
+step-size.
+ 
+ 'Azi_(a-app), Elev_(a-app),' =
+  Airless apparent azimuth and elevation of target center. Compensated
+for light-time, the gravitational deflection of light, stellar aberration,
+precession and nutation. Azimuth is measured clockwise from north:
+
+  North(0) -> East(90) -> South(180) -> West(270) -> North (360)
+
+Elevation angle is with respect to a plane perpendicular to the reference
+surface local zenith direction. TOPOCENTRIC ONLY.  Units: DEGREES
+
+Computations by ...
+
+    Solar System Dynamics Group, Horizons On-Line Ephemeris System
+    4800 Oak Grove Drive, Jet Propulsion Laboratory
+    Pasadena, CA  91109   USA
+
+    General site: https://ssd.jpl.nasa.gov/
+    Mailing list: https://ssd.jpl.nasa.gov/email_list.html
+    System news : https://ssd.jpl.nasa.gov/horizons/news.html
+    User Guide  : https://ssd.jpl.nasa.gov/horizons/manual.html
+    Connect     : browser        https://ssd.jpl.nasa.gov/horizons/app.html#/x
+                  API            https://ssd-api.jpl.nasa.gov/doc/horizons.html
+                  command-line   telnet ssd.jpl.nasa.gov 6775
+                  e-mail/batch   https://ssd.jpl.nasa.gov/ftp/ssd/hrzn_batch.txt
+                  scripts        https://ssd.jpl.nasa.gov/ftp/ssd/SCRIPTS
+    Author      : Jon.D.Giorgini@jpl.nasa.gov
+
+*******************************************************************************

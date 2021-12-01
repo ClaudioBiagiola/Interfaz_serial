@@ -1,3 +1,4 @@
+from builtins import print
 
 import serial
 from serial import Serial
@@ -137,49 +138,28 @@ def Recepcion_datos():
         Flag_recep=True
         slice_object1 = slice(3)
         slice_object2 = slice(4, 5, 1)
-        """
-        if data_str == '\r':
-            comando = b'recibi un CR\n'
-            ser.write(comando)
-        """
-        if data_str == '\r\n':
+        informacion='a'
 
+        if data_str == '\r\n':
             return 'mensaje_correcto'
             data = 'mensaje correcto'
-        """
-            
-            comando = b'recibi un CRLf\n'
-            ser.write(comando)
-            envio_de_datos_manuales('RC')
-            Tracking(19.2, 50.9)
-            
-        if data_str[slice_object2] == '\r' + ',' + '\n':
-            print('entre correcto', end='')
-        """
+
         if data_str == "?>\r\n":
             return 'mensaje_erroneo'
             data='mensaje erroneo'
             comando = b'comando erroneo\n'
             ser.write(comando)
-        if Flag_recep:
-            dato1 = data_str.split(' ')
-            if dato1[0]=='\r\n':
-                if dato1[1] != 0 and dato1[2]==0:
-                    return dato1[1]
-                if dato1[2] !=0:
-                    return dato1[1]+','+dato1[2]
 
+        if Flag_recep:
+            dato1 = data_str.split(',')
+            if dato1[len(dato1)-1] == " \r\n":
+                if dato1[0] != 0 and dato1[1] == 0:
+                    data =dato1[1]
+                if dato1[1] !=0:
+                    data = dato1[0]+','+dato1[1]
+                    Tracking(dato1[0],dato1[1])
 
         return data
-    #time.sleep(0.01)  # Optional: sleep 10 ms (0.01 sec) once per loop to let other threads on your PC run during this time
-        # print(data_str[slice_object1], end='')
-        # print(data_str[slice_object2], end='')
-        # print('el 2',slice_object2, end='')
-    # print('el 1',slice_object1, end='')
-    # print(data_str, end='')  # print the incoming string without putting a new-line ('\n') automatically after every print()
-    # comando = b'puto el que lee \n'
-    # ser.write(comando)
-    # Put the rest of your code you want here
     time.sleep(0.01)  # Optional: sleep 10 ms (0.01 sec) once per loop to let other threads on your PC run during this time
 
 def Control_autonomo():
@@ -216,6 +196,8 @@ def Control_autonomo():
                 lineasleidas += 1
 
         linea = file.readline()
+        data = file.readlines()[total_lines]
+
     return 0
     if total_lines==lineasleidas:
         return 1
