@@ -11,7 +11,7 @@ import filecmp
 
 #chequear_linea = ' Date_(ZONE)_HR:MN, , , Azi_(a-app), Elev_(a-app),'
 #--------archivo de donde  descargado de jdl horizons----------
-txt = open("horizons_results(2).txt")
+txt = open("horizons_results.txt")
 #-------------archivo de salida-----------
 file = open("comandos3.txt", "w")
 
@@ -28,10 +28,11 @@ def validador():
 
     #----------validador del formato de archivo fuente----------
     chequear_linea = ' Date__(UT)__HR:MN, , ,Azi_(a-app), Elev_(a-app),'
+    chequear_linea1= ' Date_(ZONE)_HR:MN, , ,Azi_(a-app), Elev_(a-app),'
     linea1 = txt.readline()
     while len(linea1) > 0:
 
-        if chequear_linea in linea1:
+        if (chequear_linea or chequear_linea1) in linea1:
             return 1
             break
 

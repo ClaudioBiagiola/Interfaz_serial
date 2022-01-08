@@ -42,7 +42,7 @@ import threading
 #---------archivo de entrada el mismo generado por el generador de txt----------
 file = open("comandos3.txt", "r")
 #----------habilito el serial--------------
-ser = serial.Serial('COM3', 9600)
+ser = serial.Serial('COM14', 9600, )
 Flag_recep=False
 flag1=True
 acimut=0
@@ -130,7 +130,10 @@ def all_stop():
 def Tracking(acimut,elevacion):
     #parametros="P"+str(float("{0:.1f}".format(float(acimut))))+" "+str(float("{0:0.1f}".format(float(elevacion))))
     parametros="P"+str(acimut)+" "+str(elevacion)
-    ser.write(parametros.encode('ascii')+ b'\n')
+
+    ser.write(parametros.encode('ascii')+ b'\r')
+    print(parametros.encode('ascii')+ b'\r')
+    print("envie comando")
 
 def Recepcion_datos():
     if ser.in_waiting > 0:  # if incoming bytes are waiting to be read from the serial input buffer
@@ -181,22 +184,23 @@ def Control_autonomo():
         dato1 = linea.split(',')
 
         if dato1[1] == hora_actual and fecha == dato1[0]:
-
+           # print("envie comando")
             if flag1:
                 data_acimut=dato1[2]
                 data_elevacion=dato1[3]
-                Tracking(dato1[2],dato1[3])
+                Tracking(float(dato1[2]),float(dato1[3]))
                 flag1=False
                 lineasleidas=lineasleidas+1
 
             if (float(data_acimut)!=float(dato1[2])) | (float(data_elevacion)!=float(dato1[3])):
-                Tracking(dato1[2], dato1[3])
+                Tracking(float(dato1[2]), float(dato1[3]))
                 data_acimut = dato1[2]
                 data_elevacion = dato1[3]
                 lineasleidas += 1
 
+
         linea = file.readline()
-        data = file.readlines()[total_lines]
+        #data = file.readlines()[total_lines]
 
     return 0
     if total_lines==lineasleidas:
@@ -205,13 +209,20 @@ def Control_autonomo():
 # Press the green button in the gutter to run the script.
 
 if __name__ == '__main__':
-
+   ## flags_tracking1 = 1
+    ##flags_tracking2 = 1
+    command = b'....\r'
+    ser.write(command)
     while 1:
+       # data = Recepcion_datos()
+       # print(data)
+
         time.sleep(1)
-        data = Recepcion_datos()
-        print(data)
+        #data = Recepcion_datos()
+        #print(data)
         Control_autonomo()
         #print(data)
+       # pass
 
 
 
