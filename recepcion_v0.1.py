@@ -42,7 +42,7 @@ import threading
 #---------archivo de entrada el mismo generado por el generador de txt----------
 file = open("comandos3.txt", "r")
 #----------habilito el serial--------------
-ser = serial.Serial('COM14', 9600, )
+ser = serial.Serial('COM3', 9600, )
 Flag_recep=False
 flag1=True
 acimut=0
@@ -96,9 +96,9 @@ def envio_de_datos_manuales( comando):
         ser.write(texto)
 
 """
-Acimut                  C // solicitar datos ------------> C
-Elevacion               B // solicitar datos-------------> B
-Acimut elevacion        B // solicitar datos-------------> C-B
+Acimut                  acimut              // solicitar datos ------------> C
+Elevacion               elevacion           // solicitar datos-------------> B
+Acimut elevacion        all                 // solicitar datos-------------> C-B
 """
 def Solicitud_datos(comando):
     # Acimut
@@ -128,7 +128,7 @@ def all_stop():
     ser.write(command)
 
 def Tracking(acimut,elevacion):
-    #parametros="P"+str(float("{0:.1f}".format(float(acimut))))+" "+str(float("{0:0.1f}".format(float(elevacion))))
+
     parametros="P"+str(acimut)+" "+str(elevacion)
 
     ser.write(parametros.encode('ascii')+ b'\r')
@@ -154,15 +154,23 @@ def Recepcion_datos():
             ser.write(comando)
 
         if Flag_recep:
-            dato1 = data_str.split(',')
-            if dato1[len(dato1)-1] == " \r\n":
-                if dato1[0] != 0 and dato1[1] == 0:
-                    data =dato1[1]
-                if dato1[1] !=0:
-                    data = dato1[0]+','+dato1[1]
-                    Tracking(dato1[0],dato1[1])
 
-        return data
+            dato1 = data_str.split(',')
+            if dato1[len(dato1)-1] == "\r\n":
+                if dato1[0] != 0 and dato1[2] == 0:
+                    data =dato1[1]
+                    return data
+                if dato1[2] !=0:
+                    if (dato1[0] == ("A"or"a")) and (dato1[2] == ("E" or "e")) :
+                        Raw_acimut=dato1[1]
+                    #if dato1[2] == ("E" or "e"):
+                        Raw_elevacion=dato1[3]
+                        data = Raw_acimut+','+Raw_elevacion
+                        Tracking(Raw_acimut,Raw_elevacion)
+                        print("llego dato")
+                   # return data
+
+
     time.sleep(0.01)  # Optional: sleep 10 ms (0.01 sec) once per loop to let other threads on your PC run during this time
 
 def Control_autonomo():
@@ -170,6 +178,7 @@ def Control_autonomo():
     global data_elevacion
     global flag1
     lineasleidas=0
+    veces_neg=0
     hora_actual = time.strftime('%H:%M')
     """--------solicito fecha y la genero al formato para comparar con el archivo----------"""
     fecha_sin_analizar= time.strftime('%m/%d/%y')
@@ -186,25 +195,44 @@ def Control_autonomo():
         if dato1[1] == hora_actual and fecha == dato1[0]:
            # print("envie comando")
             if flag1:
-                data_acimut=dato1[2]
-                data_elevacion=dato1[3]
-                Tracking(float(dato1[2]),float(dato1[3]))
-                flag1=False
+                data_acimut=float (dato1[2])
+                data_elevacion=float (dato1[3])
+                if (data_acimut < 0) or (data_elevacion < 0) :
+                    print("valor negativo ")
+                    veces_neg += 1
+
+
+                if (data_acimut >= 0) or (data_elevacion >= 0):
+                    Tracking(data_acimut,data_elevacion)
+                    flag1=False
                 lineasleidas=lineasleidas+1
 
-            if (float(data_acimut)!=float(dato1[2])) | (float(data_elevacion)!=float(dato1[3])):
-                Tracking(float(dato1[2]), float(dato1[3]))
-                data_acimut = dato1[2]
-                data_elevacion = dato1[3]
-                lineasleidas += 1
+                print("Comando enviado",data_acimut,data_acimut)
 
+            if (float(data_acimut)!=float(dato1[2])) | (float(data_elevacion)!=float(dato1[3])):
+                data_acimut = float(dato1[2])
+                data_elevacion = float(dato1[3])
+                if (data_acimut < 0) or (data_elevacion < 0):
+                    print("valor negativo ")
+                    veces_neg += 1
+                    if veces_neg == 3:
+                        parametros = "H"
+                        ser.write(parametros.encode('ascii') + b'\r')
+
+                if (data_acimut >= 0) or (data_elevacion >= 0):
+                    Tracking(data_acimut, data_elevacion)
+                    veces_neg=0
+                lineasleidas += 1
+                print("Comando enviado" , data_acimut , data_acimut)
 
         linea = file.readline()
         #data = file.readlines()[total_lines]
 
     return 0
     if total_lines==lineasleidas:
+        file.close(ser)
         return 1
+    #if len(total_lines)
 
 # Press the green button in the gutter to run the script.
 
@@ -214,8 +242,8 @@ if __name__ == '__main__':
     command = b'....\r'
     ser.write(command)
     while 1:
-       # data = Recepcion_datos()
-       # print(data)
+        data = Recepcion_datos()
+        print(data)
 
         time.sleep(1)
         #data = Recepcion_datos()
